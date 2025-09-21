@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "lib2mcp_pathlib": {
+      "command": "python",
+      "args": [
+        "D:\\workspace\\kiro\\lib2mcp\\output\\pathlib_mcp\\pathlib_mcp_server.py"
+      ]
+    }
+  }
+}
