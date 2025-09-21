@@ -1,7 +1,0 @@
-{
-  "library_name": "numpy",
-  "tools_file": "numpy_mcp\\tools\\numpy_tools.json",
-  "statistics_file": "numpy_mcp\\tools\\numpy_stats.json",
-  "tool_count": 6511,
-  "generated_at": "2025-09-21T10:47:46.028573"
-}

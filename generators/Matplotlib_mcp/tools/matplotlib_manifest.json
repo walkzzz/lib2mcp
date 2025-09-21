@@ -1,7 +1,0 @@
-{
-  "library_name": "matplotlib",
-  "tools_file": "matplotlib_mcp\\tools\\matplotlib_tools.json",
-  "statistics_file": "matplotlib_mcp\\tools\\matplotlib_stats.json",
-  "tool_count": 13784,
-  "generated_at": "2025-09-21T10:52:33.840775"
-}

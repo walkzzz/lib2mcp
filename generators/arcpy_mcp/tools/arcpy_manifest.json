@@ -1,7 +1,0 @@
-{
-  "library_name": "arcpy",
-  "tools_file": "arcpy_mcp\\tools\\arcpy_tools.json",
-  "statistics_file": "arcpy_mcp\\tools\\arcpy_stats.json",
-  "tool_count": 3018,
-  "generated_at": "2025-09-21T10:57:21.949962"
-}

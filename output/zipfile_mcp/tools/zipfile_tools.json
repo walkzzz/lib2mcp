@@ -1,0 +1,2088 @@
+{
+  "zipfile.is_zipfile": {
+    "name": "zipfile_is_zipfile",
+    "description": "Quickly see if a file is a ZIP file by checking the magic number.\nThe filename argument may be a file or file-like object too.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "filename": {
+          "type": "string",
+          "description": "类型从参数名推断: filename"
+        }
+      },
+      "required": [
+        "filename"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.is_zipfile",
+      "module": "zipfile",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    },
+    "outputSchema": {
+      "type": "boolean"
+    }
+  },
+  "zipfile.main": {
+    "name": "zipfile_main",
+    "description": "执行main操作（zipfile模块的函数）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.main",
+      "module": "zipfile",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.CompleteDirs.close": {
+    "name": "zipfile_CompleteDirs_close",
+    "description": "Close the file, and for mode 'w', 'x' and 'a' write the ending\nrecords.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.CompleteDirs.close",
+      "module": "zipfile",
+      "class_name": "CompleteDirs",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.CompleteDirs.extract": {
+    "name": "zipfile_CompleteDirs_extract",
+    "description": "Extract a member from the archive to the current working directory,\nusing its full name. Its file information is extracted as accurately\nas possible. `member' may be a filename or a ZipInfo object. You can\nspecify a different directory using `path'.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "member": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "path": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "member"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.CompleteDirs.extract",
+      "module": "zipfile",
+      "class_name": "CompleteDirs",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.CompleteDirs.extractall": {
+    "name": "zipfile_CompleteDirs_extractall",
+    "description": "Extract all members from the archive to the current working\ndirectory. `path' specifies a different directory to extract to.\n`members' is optional and must be a subset of the list returned\nby namelist().",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "members": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.CompleteDirs.extractall",
+      "module": "zipfile",
+      "class_name": "CompleteDirs",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.CompleteDirs.getinfo": {
+    "name": "zipfile_CompleteDirs_getinfo",
+    "description": "Supplement getinfo for implied dirs.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.CompleteDirs.getinfo",
+      "module": "zipfile",
+      "class_name": "CompleteDirs",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.CompleteDirs.infolist": {
+    "name": "zipfile_CompleteDirs_infolist",
+    "description": "Return a list of class ZipInfo instances for files in the\narchive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.CompleteDirs.infolist",
+      "module": "zipfile",
+      "class_name": "CompleteDirs",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.CompleteDirs.mkdir": {
+    "name": "zipfile_CompleteDirs_mkdir",
+    "description": "Creates a directory inside the zip archive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "zinfo_or_directory_name": {
+          "type": "string",
+          "description": "类型从参数名推断: zinfo_or_directory_name"
+        },
+        "mode": {
+          "type": "integer",
+          "default": 511,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": [
+        "zinfo_or_directory_name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.CompleteDirs.mkdir",
+      "module": "zipfile",
+      "class_name": "CompleteDirs",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.CompleteDirs.namelist": {
+    "name": "zipfile_CompleteDirs_namelist",
+    "description": "执行namelist操作（CompleteDirs类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.CompleteDirs.namelist",
+      "module": "zipfile",
+      "class_name": "CompleteDirs",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.CompleteDirs.open": {
+    "name": "zipfile_CompleteDirs_open",
+    "description": "Return file-like object for 'name'.\nname is a string for the file name within the ZIP file, or a ZipInfo\nobject.\nmode should be 'r' to read a file already in the ZIP file, or 'w' to\nwrite to a file newly added to the archive.\npwd is the password to decrypt files (only used for reading).\nWhen writing, if the file size is not known in advance but may exceed\n2 GiB, pass force_zip64 to use the ZIP64 format, which can handle large\nfiles.  If the size is known in advance, it is best to pass a ZipInfo\ninstance for name, with zinfo.file_size set.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        },
+        "mode": {
+          "type": "string",
+          "default": "r",
+          "description": "类型从默认值推断: str"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "force_zip64": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.CompleteDirs.open",
+      "module": "zipfile",
+      "class_name": "CompleteDirs",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.CompleteDirs.printdir": {
+    "name": "zipfile_CompleteDirs_printdir",
+    "description": "Print a table of contents for the zip file.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.CompleteDirs.printdir",
+      "module": "zipfile",
+      "class_name": "CompleteDirs",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.CompleteDirs.read": {
+    "name": "zipfile_CompleteDirs_read",
+    "description": "Return file bytes for name.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.CompleteDirs.read",
+      "module": "zipfile",
+      "class_name": "CompleteDirs",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.CompleteDirs.resolve_dir": {
+    "name": "zipfile_CompleteDirs_resolve_dir",
+    "description": "If the name represents a directory, return that name\nas a directory (with the trailing slash).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.CompleteDirs.resolve_dir",
+      "module": "zipfile",
+      "class_name": "CompleteDirs",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.CompleteDirs.setpassword": {
+    "name": "zipfile_CompleteDirs_setpassword",
+    "description": "Set default password for encrypted files.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "pwd"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.CompleteDirs.setpassword",
+      "module": "zipfile",
+      "class_name": "CompleteDirs",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.CompleteDirs.testzip": {
+    "name": "zipfile_CompleteDirs_testzip",
+    "description": "Read all the files and check the CRC.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.CompleteDirs.testzip",
+      "module": "zipfile",
+      "class_name": "CompleteDirs",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.CompleteDirs.write": {
+    "name": "zipfile_CompleteDirs_write",
+    "description": "Put the bytes from filename into the archive under the name\narcname.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "filename": {
+          "type": "string",
+          "description": "类型从参数名推断: filename"
+        },
+        "arcname": {
+          "type": "string",
+          "description": "类型从参数名推断: arcname"
+        },
+        "compress_type": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "compresslevel": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "filename"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.CompleteDirs.write",
+      "module": "zipfile",
+      "class_name": "CompleteDirs",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.CompleteDirs.writestr": {
+    "name": "zipfile_CompleteDirs_writestr",
+    "description": "Write a file into the archive.  The contents is 'data', which\nmay be either a 'str' or a 'bytes' instance; if it is a 'str',\nit is encoded as UTF-8 first.\n'zinfo_or_arcname' is either a ZipInfo instance or\nthe name of the file in the archive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "zinfo_or_arcname": {
+          "type": "string",
+          "description": "类型从参数名推断: zinfo_or_arcname"
+        },
+        "data": {
+          "type": "object",
+          "description": "类型从参数名推断: data"
+        },
+        "compress_type": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "compresslevel": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "zinfo_or_arcname",
+        "data"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.CompleteDirs.writestr",
+      "module": "zipfile",
+      "class_name": "CompleteDirs",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.FastLookup.close": {
+    "name": "zipfile_FastLookup_close",
+    "description": "Close the file, and for mode 'w', 'x' and 'a' write the ending\nrecords.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.FastLookup.close",
+      "module": "zipfile",
+      "class_name": "FastLookup",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.FastLookup.extract": {
+    "name": "zipfile_FastLookup_extract",
+    "description": "Extract a member from the archive to the current working directory,\nusing its full name. Its file information is extracted as accurately\nas possible. `member' may be a filename or a ZipInfo object. You can\nspecify a different directory using `path'.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "member": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "path": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "member"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.FastLookup.extract",
+      "module": "zipfile",
+      "class_name": "FastLookup",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.FastLookup.extractall": {
+    "name": "zipfile_FastLookup_extractall",
+    "description": "Extract all members from the archive to the current working\ndirectory. `path' specifies a different directory to extract to.\n`members' is optional and must be a subset of the list returned\nby namelist().",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "members": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.FastLookup.extractall",
+      "module": "zipfile",
+      "class_name": "FastLookup",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.FastLookup.getinfo": {
+    "name": "zipfile_FastLookup_getinfo",
+    "description": "Supplement getinfo for implied dirs.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.FastLookup.getinfo",
+      "module": "zipfile",
+      "class_name": "FastLookup",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.FastLookup.infolist": {
+    "name": "zipfile_FastLookup_infolist",
+    "description": "Return a list of class ZipInfo instances for files in the\narchive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.FastLookup.infolist",
+      "module": "zipfile",
+      "class_name": "FastLookup",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.FastLookup.mkdir": {
+    "name": "zipfile_FastLookup_mkdir",
+    "description": "Creates a directory inside the zip archive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "zinfo_or_directory_name": {
+          "type": "string",
+          "description": "类型从参数名推断: zinfo_or_directory_name"
+        },
+        "mode": {
+          "type": "integer",
+          "default": 511,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": [
+        "zinfo_or_directory_name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.FastLookup.mkdir",
+      "module": "zipfile",
+      "class_name": "FastLookup",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.FastLookup.namelist": {
+    "name": "zipfile_FastLookup_namelist",
+    "description": "执行namelist操作（FastLookup类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.FastLookup.namelist",
+      "module": "zipfile",
+      "class_name": "FastLookup",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.FastLookup.open": {
+    "name": "zipfile_FastLookup_open",
+    "description": "Return file-like object for 'name'.\nname is a string for the file name within the ZIP file, or a ZipInfo\nobject.\nmode should be 'r' to read a file already in the ZIP file, or 'w' to\nwrite to a file newly added to the archive.\npwd is the password to decrypt files (only used for reading).\nWhen writing, if the file size is not known in advance but may exceed\n2 GiB, pass force_zip64 to use the ZIP64 format, which can handle large\nfiles.  If the size is known in advance, it is best to pass a ZipInfo\ninstance for name, with zinfo.file_size set.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        },
+        "mode": {
+          "type": "string",
+          "default": "r",
+          "description": "类型从默认值推断: str"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "force_zip64": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.FastLookup.open",
+      "module": "zipfile",
+      "class_name": "FastLookup",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.FastLookup.printdir": {
+    "name": "zipfile_FastLookup_printdir",
+    "description": "Print a table of contents for the zip file.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.FastLookup.printdir",
+      "module": "zipfile",
+      "class_name": "FastLookup",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.FastLookup.read": {
+    "name": "zipfile_FastLookup_read",
+    "description": "Return file bytes for name.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.FastLookup.read",
+      "module": "zipfile",
+      "class_name": "FastLookup",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.FastLookup.resolve_dir": {
+    "name": "zipfile_FastLookup_resolve_dir",
+    "description": "If the name represents a directory, return that name\nas a directory (with the trailing slash).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.FastLookup.resolve_dir",
+      "module": "zipfile",
+      "class_name": "FastLookup",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.FastLookup.setpassword": {
+    "name": "zipfile_FastLookup_setpassword",
+    "description": "Set default password for encrypted files.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "pwd"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.FastLookup.setpassword",
+      "module": "zipfile",
+      "class_name": "FastLookup",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.FastLookup.testzip": {
+    "name": "zipfile_FastLookup_testzip",
+    "description": "Read all the files and check the CRC.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.FastLookup.testzip",
+      "module": "zipfile",
+      "class_name": "FastLookup",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.FastLookup.write": {
+    "name": "zipfile_FastLookup_write",
+    "description": "Put the bytes from filename into the archive under the name\narcname.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "filename": {
+          "type": "string",
+          "description": "类型从参数名推断: filename"
+        },
+        "arcname": {
+          "type": "string",
+          "description": "类型从参数名推断: arcname"
+        },
+        "compress_type": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "compresslevel": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "filename"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.FastLookup.write",
+      "module": "zipfile",
+      "class_name": "FastLookup",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.FastLookup.writestr": {
+    "name": "zipfile_FastLookup_writestr",
+    "description": "Write a file into the archive.  The contents is 'data', which\nmay be either a 'str' or a 'bytes' instance; if it is a 'str',\nit is encoded as UTF-8 first.\n'zinfo_or_arcname' is either a ZipInfo instance or\nthe name of the file in the archive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "zinfo_or_arcname": {
+          "type": "string",
+          "description": "类型从参数名推断: zinfo_or_arcname"
+        },
+        "data": {
+          "type": "object",
+          "description": "类型从参数名推断: data"
+        },
+        "compress_type": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "compresslevel": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "zinfo_or_arcname",
+        "data"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.FastLookup.writestr",
+      "module": "zipfile",
+      "class_name": "FastLookup",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.LZMACompressor.compress": {
+    "name": "zipfile_LZMACompressor_compress",
+    "description": "执行compress操作（LZMACompressor类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "object",
+          "description": "类型从参数名推断: data"
+        }
+      },
+      "required": [
+        "data"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.LZMACompressor.compress",
+      "module": "zipfile",
+      "class_name": "LZMACompressor",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.LZMACompressor.flush": {
+    "name": "zipfile_LZMACompressor_flush",
+    "description": "执行flush操作（LZMACompressor类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.LZMACompressor.flush",
+      "module": "zipfile",
+      "class_name": "LZMACompressor",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.LZMADecompressor.decompress": {
+    "name": "zipfile_LZMADecompressor_decompress",
+    "description": "执行decompress操作（LZMADecompressor类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "object",
+          "description": "类型从参数名推断: data"
+        }
+      },
+      "required": [
+        "data"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.LZMADecompressor.decompress",
+      "module": "zipfile",
+      "class_name": "LZMADecompressor",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.Path.exists": {
+    "name": "zipfile_Path_exists",
+    "description": "执行exists操作（Path类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.Path.exists",
+      "module": "zipfile",
+      "class_name": "Path",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.Path.is_dir": {
+    "name": "zipfile_Path_is_dir",
+    "description": "执行is_dir操作（Path类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.Path.is_dir",
+      "module": "zipfile",
+      "class_name": "Path",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    },
+    "outputSchema": {
+      "type": "boolean"
+    }
+  },
+  "zipfile.Path.is_file": {
+    "name": "zipfile_Path_is_file",
+    "description": "执行is_file操作（Path类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.Path.is_file",
+      "module": "zipfile",
+      "class_name": "Path",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    },
+    "outputSchema": {
+      "type": "boolean"
+    }
+  },
+  "zipfile.Path.iterdir": {
+    "name": "zipfile_Path_iterdir",
+    "description": "执行iterdir操作（Path类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.Path.iterdir",
+      "module": "zipfile",
+      "class_name": "Path",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.Path.joinpath": {
+    "name": "zipfile_Path_joinpath",
+    "description": "执行joinpath操作（Path类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "other": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "other"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.Path.joinpath",
+      "module": "zipfile",
+      "class_name": "Path",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.Path.open": {
+    "name": "zipfile_Path_open",
+    "description": "Open this entry as text or binary following the semantics\nof ``pathlib.Path.open()`` by passing arguments through\nto io.TextIOWrapper().",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        },
+        "mode": {
+          "type": "string",
+          "default": "r",
+          "description": "类型从默认值推断: str"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "force_zip64": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.Path.open",
+      "module": "zipfile",
+      "class_name": "Path",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.Path.read_bytes": {
+    "name": "zipfile_Path_read_bytes",
+    "description": "读取数据（Path类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.Path.read_bytes",
+      "module": "zipfile",
+      "class_name": "Path",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.Path.read_text": {
+    "name": "zipfile_Path_read_text",
+    "description": "读取数据（Path类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "kwargs": {
+          "type": "object",
+          "description": "类型从参数名推断: kwargs"
+        }
+      },
+      "required": [
+        "args",
+        "kwargs"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.Path.read_text",
+      "module": "zipfile",
+      "class_name": "Path",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.PyZipFile.close": {
+    "name": "zipfile_PyZipFile_close",
+    "description": "Close the file, and for mode 'w', 'x' and 'a' write the ending\nrecords.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.PyZipFile.close",
+      "module": "zipfile",
+      "class_name": "PyZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.PyZipFile.extract": {
+    "name": "zipfile_PyZipFile_extract",
+    "description": "Extract a member from the archive to the current working directory,\nusing its full name. Its file information is extracted as accurately\nas possible. `member' may be a filename or a ZipInfo object. You can\nspecify a different directory using `path'.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "member": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "path": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "member"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.PyZipFile.extract",
+      "module": "zipfile",
+      "class_name": "PyZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.PyZipFile.extractall": {
+    "name": "zipfile_PyZipFile_extractall",
+    "description": "Extract all members from the archive to the current working\ndirectory. `path' specifies a different directory to extract to.\n`members' is optional and must be a subset of the list returned\nby namelist().",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "members": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.PyZipFile.extractall",
+      "module": "zipfile",
+      "class_name": "PyZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.PyZipFile.getinfo": {
+    "name": "zipfile_PyZipFile_getinfo",
+    "description": "Return the instance of ZipInfo given 'name'.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.PyZipFile.getinfo",
+      "module": "zipfile",
+      "class_name": "PyZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.PyZipFile.infolist": {
+    "name": "zipfile_PyZipFile_infolist",
+    "description": "Return a list of class ZipInfo instances for files in the\narchive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.PyZipFile.infolist",
+      "module": "zipfile",
+      "class_name": "PyZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.PyZipFile.mkdir": {
+    "name": "zipfile_PyZipFile_mkdir",
+    "description": "Creates a directory inside the zip archive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "zinfo_or_directory_name": {
+          "type": "string",
+          "description": "类型从参数名推断: zinfo_or_directory_name"
+        },
+        "mode": {
+          "type": "integer",
+          "default": 511,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": [
+        "zinfo_or_directory_name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.PyZipFile.mkdir",
+      "module": "zipfile",
+      "class_name": "PyZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.PyZipFile.namelist": {
+    "name": "zipfile_PyZipFile_namelist",
+    "description": "Return a list of file names in the archive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.PyZipFile.namelist",
+      "module": "zipfile",
+      "class_name": "PyZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.PyZipFile.open": {
+    "name": "zipfile_PyZipFile_open",
+    "description": "Return file-like object for 'name'.\nname is a string for the file name within the ZIP file, or a ZipInfo\nobject.\nmode should be 'r' to read a file already in the ZIP file, or 'w' to\nwrite to a file newly added to the archive.\npwd is the password to decrypt files (only used for reading).\nWhen writing, if the file size is not known in advance but may exceed\n2 GiB, pass force_zip64 to use the ZIP64 format, which can handle large\nfiles.  If the size is known in advance, it is best to pass a ZipInfo\ninstance for name, with zinfo.file_size set.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        },
+        "mode": {
+          "type": "string",
+          "default": "r",
+          "description": "类型从默认值推断: str"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "force_zip64": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.PyZipFile.open",
+      "module": "zipfile",
+      "class_name": "PyZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.PyZipFile.printdir": {
+    "name": "zipfile_PyZipFile_printdir",
+    "description": "Print a table of contents for the zip file.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.PyZipFile.printdir",
+      "module": "zipfile",
+      "class_name": "PyZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.PyZipFile.read": {
+    "name": "zipfile_PyZipFile_read",
+    "description": "Return file bytes for name.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.PyZipFile.read",
+      "module": "zipfile",
+      "class_name": "PyZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.PyZipFile.setpassword": {
+    "name": "zipfile_PyZipFile_setpassword",
+    "description": "Set default password for encrypted files.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "pwd"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.PyZipFile.setpassword",
+      "module": "zipfile",
+      "class_name": "PyZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.PyZipFile.testzip": {
+    "name": "zipfile_PyZipFile_testzip",
+    "description": "Read all the files and check the CRC.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.PyZipFile.testzip",
+      "module": "zipfile",
+      "class_name": "PyZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.PyZipFile.write": {
+    "name": "zipfile_PyZipFile_write",
+    "description": "Put the bytes from filename into the archive under the name\narcname.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "filename": {
+          "type": "string",
+          "description": "类型从参数名推断: filename"
+        },
+        "arcname": {
+          "type": "string",
+          "description": "类型从参数名推断: arcname"
+        },
+        "compress_type": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "compresslevel": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "filename"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.PyZipFile.write",
+      "module": "zipfile",
+      "class_name": "PyZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.PyZipFile.writepy": {
+    "name": "zipfile_PyZipFile_writepy",
+    "description": "Add all files from \"pathname\" to the ZIP archive.\nIf pathname is a package directory, search the directory and\nall package subdirectories recursively for all *.py and enter\nthe modules into the archive.  If pathname is a plain\ndirectory, listdir *.py and enter all modules.  Else, pathname\nmust be a Python *.py file and the module will be put into the\narchive.  Added modules are always module.pyc.\nThis method will compile the module.py into module.pyc if\nnecessary.\nIf filterfunc(pathname) is given, it is called with every argument.\nWhen it is False, the file or directory is skipped.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "pathname": {
+          "type": "string",
+          "description": "类型从参数名推断: pathname"
+        },
+        "basename": {
+          "type": "string",
+          "default": "",
+          "description": "类型从默认值推断: str"
+        },
+        "filterfunc": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "pathname"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.PyZipFile.writepy",
+      "module": "zipfile",
+      "class_name": "PyZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.PyZipFile.writestr": {
+    "name": "zipfile_PyZipFile_writestr",
+    "description": "Write a file into the archive.  The contents is 'data', which\nmay be either a 'str' or a 'bytes' instance; if it is a 'str',\nit is encoded as UTF-8 first.\n'zinfo_or_arcname' is either a ZipInfo instance or\nthe name of the file in the archive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "zinfo_or_arcname": {
+          "type": "string",
+          "description": "类型从参数名推断: zinfo_or_arcname"
+        },
+        "data": {
+          "type": "object",
+          "description": "类型从参数名推断: data"
+        },
+        "compress_type": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "compresslevel": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "zinfo_or_arcname",
+        "data"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.PyZipFile.writestr",
+      "module": "zipfile",
+      "class_name": "PyZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipExtFile.close": {
+    "name": "zipfile_ZipExtFile_close",
+    "description": "关闭数据（ZipExtFile类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipExtFile.close",
+      "module": "zipfile",
+      "class_name": "ZipExtFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipExtFile.peek": {
+    "name": "zipfile_ZipExtFile_peek",
+    "description": "Returns buffered bytes without advancing the position.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "n": {
+          "type": "integer",
+          "default": 1,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipExtFile.peek",
+      "module": "zipfile",
+      "class_name": "ZipExtFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipExtFile.read": {
+    "name": "zipfile_ZipExtFile_read",
+    "description": "Read and return up to n bytes.\nIf the argument is omitted, None, or negative, data is read and returned until EOF is reached.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipExtFile.read",
+      "module": "zipfile",
+      "class_name": "ZipExtFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipExtFile.read1": {
+    "name": "zipfile_ZipExtFile_read1",
+    "description": "Read up to n bytes with at most one read() system call.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "n": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "n"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipExtFile.read1",
+      "module": "zipfile",
+      "class_name": "ZipExtFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipExtFile.readable": {
+    "name": "zipfile_ZipExtFile_readable",
+    "description": "读取数据（ZipExtFile类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipExtFile.readable",
+      "module": "zipfile",
+      "class_name": "ZipExtFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipExtFile.readline": {
+    "name": "zipfile_ZipExtFile_readline",
+    "description": "Read and return a line from the stream.\nIf limit is specified, at most limit bytes will be read.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "integer",
+          "default": -1,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipExtFile.readline",
+      "module": "zipfile",
+      "class_name": "ZipExtFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipExtFile.seek": {
+    "name": "zipfile_ZipExtFile_seek",
+    "description": "执行seek操作（ZipExtFile类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "offset": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "whence": {
+          "type": "integer",
+          "default": 0,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": [
+        "offset"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipExtFile.seek",
+      "module": "zipfile",
+      "class_name": "ZipExtFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipExtFile.seekable": {
+    "name": "zipfile_ZipExtFile_seekable",
+    "description": "执行seekable操作（ZipExtFile类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipExtFile.seekable",
+      "module": "zipfile",
+      "class_name": "ZipExtFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipExtFile.tell": {
+    "name": "zipfile_ZipExtFile_tell",
+    "description": "执行tell操作（ZipExtFile类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipExtFile.tell",
+      "module": "zipfile",
+      "class_name": "ZipExtFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipFile.close": {
+    "name": "zipfile_ZipFile_close",
+    "description": "Close the file, and for mode 'w', 'x' and 'a' write the ending\nrecords.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipFile.close",
+      "module": "zipfile",
+      "class_name": "ZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipFile.extract": {
+    "name": "zipfile_ZipFile_extract",
+    "description": "Extract a member from the archive to the current working directory,\nusing its full name. Its file information is extracted as accurately\nas possible. `member' may be a filename or a ZipInfo object. You can\nspecify a different directory using `path'.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "member": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "path": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "member"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipFile.extract",
+      "module": "zipfile",
+      "class_name": "ZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipFile.extractall": {
+    "name": "zipfile_ZipFile_extractall",
+    "description": "Extract all members from the archive to the current working\ndirectory. `path' specifies a different directory to extract to.\n`members' is optional and must be a subset of the list returned\nby namelist().",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "members": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipFile.extractall",
+      "module": "zipfile",
+      "class_name": "ZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipFile.getinfo": {
+    "name": "zipfile_ZipFile_getinfo",
+    "description": "Return the instance of ZipInfo given 'name'.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipFile.getinfo",
+      "module": "zipfile",
+      "class_name": "ZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipFile.infolist": {
+    "name": "zipfile_ZipFile_infolist",
+    "description": "Return a list of class ZipInfo instances for files in the\narchive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipFile.infolist",
+      "module": "zipfile",
+      "class_name": "ZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipFile.mkdir": {
+    "name": "zipfile_ZipFile_mkdir",
+    "description": "Creates a directory inside the zip archive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "zinfo_or_directory_name": {
+          "type": "string",
+          "description": "类型从参数名推断: zinfo_or_directory_name"
+        },
+        "mode": {
+          "type": "integer",
+          "default": 511,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": [
+        "zinfo_or_directory_name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipFile.mkdir",
+      "module": "zipfile",
+      "class_name": "ZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipFile.namelist": {
+    "name": "zipfile_ZipFile_namelist",
+    "description": "Return a list of file names in the archive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipFile.namelist",
+      "module": "zipfile",
+      "class_name": "ZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipFile.open": {
+    "name": "zipfile_ZipFile_open",
+    "description": "Return file-like object for 'name'.\nname is a string for the file name within the ZIP file, or a ZipInfo\nobject.\nmode should be 'r' to read a file already in the ZIP file, or 'w' to\nwrite to a file newly added to the archive.\npwd is the password to decrypt files (only used for reading).\nWhen writing, if the file size is not known in advance but may exceed\n2 GiB, pass force_zip64 to use the ZIP64 format, which can handle large\nfiles.  If the size is known in advance, it is best to pass a ZipInfo\ninstance for name, with zinfo.file_size set.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        },
+        "mode": {
+          "type": "string",
+          "default": "r",
+          "description": "类型从默认值推断: str"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "force_zip64": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipFile.open",
+      "module": "zipfile",
+      "class_name": "ZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipFile.printdir": {
+    "name": "zipfile_ZipFile_printdir",
+    "description": "Print a table of contents for the zip file.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipFile.printdir",
+      "module": "zipfile",
+      "class_name": "ZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipFile.read": {
+    "name": "zipfile_ZipFile_read",
+    "description": "Return file bytes for name.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        },
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipFile.read",
+      "module": "zipfile",
+      "class_name": "ZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipFile.setpassword": {
+    "name": "zipfile_ZipFile_setpassword",
+    "description": "Set default password for encrypted files.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "pwd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "pwd"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipFile.setpassword",
+      "module": "zipfile",
+      "class_name": "ZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipFile.testzip": {
+    "name": "zipfile_ZipFile_testzip",
+    "description": "Read all the files and check the CRC.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipFile.testzip",
+      "module": "zipfile",
+      "class_name": "ZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipFile.write": {
+    "name": "zipfile_ZipFile_write",
+    "description": "Put the bytes from filename into the archive under the name\narcname.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "filename": {
+          "type": "string",
+          "description": "类型从参数名推断: filename"
+        },
+        "arcname": {
+          "type": "string",
+          "description": "类型从参数名推断: arcname"
+        },
+        "compress_type": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "compresslevel": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "filename"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipFile.write",
+      "module": "zipfile",
+      "class_name": "ZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipFile.writestr": {
+    "name": "zipfile_ZipFile_writestr",
+    "description": "Write a file into the archive.  The contents is 'data', which\nmay be either a 'str' or a 'bytes' instance; if it is a 'str',\nit is encoded as UTF-8 first.\n'zinfo_or_arcname' is either a ZipInfo instance or\nthe name of the file in the archive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "zinfo_or_arcname": {
+          "type": "string",
+          "description": "类型从参数名推断: zinfo_or_arcname"
+        },
+        "data": {
+          "type": "object",
+          "description": "类型从参数名推断: data"
+        },
+        "compress_type": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "compresslevel": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "zinfo_or_arcname",
+        "data"
+      ]
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipFile.writestr",
+      "module": "zipfile",
+      "class_name": "ZipFile",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipInfo.FileHeader": {
+    "name": "zipfile_ZipInfo_FileHeader",
+    "description": "Return the per-file header as a bytes object.\nWhen the optional zip64 arg is None rather than a bool, we will\ndecide based upon the file_size and compress_size, if known,\nFalse otherwise.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "zip64": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipInfo.FileHeader",
+      "module": "zipfile",
+      "class_name": "ZipInfo",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "zipfile.ZipInfo.is_dir": {
+    "name": "zipfile_ZipInfo_is_dir",
+    "description": "Return True if this archive member is a directory.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "zipfile.ZipInfo.is_dir",
+      "module": "zipfile",
+      "class_name": "ZipInfo",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    },
+    "outputSchema": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "lib2mcp_zipfile": {
+      "command": "python",
+      "args": [
+        "D:\\workspace\\kiro\\lib2mcp\\output\\zipfile_mcp\\zipfile_mcp_server.py"
+      ]
+    }
+  }
+}
