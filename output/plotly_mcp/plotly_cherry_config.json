@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "lib2mcp_plotly": {
+      "command": "python",
+      "args": [
+        "D:\\workspace\\kiro\\lib2mcp\\output\\plotly_mcp\\plotly_mcp_server.py"
+      ]
+    }
+  }
+}

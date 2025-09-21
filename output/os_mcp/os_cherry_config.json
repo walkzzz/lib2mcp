@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "lib2mcp_os": {
+      "command": "python",
+      "args": [
+        "D:\\workspace\\kiro\\lib2mcp\\output\\os_mcp\\os_mcp_server.py"
+      ]
+    }
+  }
+}

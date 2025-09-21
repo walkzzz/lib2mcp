@@ -1,0 +1,2010 @@
+{
+  "collections.namedtuple": {
+    "name": "collections_namedtuple",
+    "description": "Returns a new subclass of tuple with named fields.\n>>> Point = namedtuple('Point', ['x', 'y'])\n>>> Point.__doc__                   # docstring for the new class\n'Point(x, y)'\n>>> p = Point(11, y=22)             # instantiate with positional args or keywords\n>>> p[0] + p[1]                     # indexable like a plain tuple\n33\n>>> x, y = p                        # unpack like a regular tuple\n>>> x, y\n(11, 22)\n>>> p.x + p.y                       # fields also accessible by name\n33\n>>> d = p._asdict()                 # convert to a dictionary\n>>> d['x']\n11\n>>> Point(**d)                      # convert from a dictionary\nPoint(x=11, y=22)\n>>> p._replace(x=100)               # _replace() is like str.replace() but targets named fields\nPoint(x=100, y=22)",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "typename": {
+          "type": "string",
+          "description": "类型从参数名推断: typename"
+        },
+        "field_names": {
+          "type": "string",
+          "description": "类型从参数名推断: field_names"
+        },
+        "rename": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        },
+        "defaults": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "module": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "typename",
+        "field_names"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.namedtuple",
+      "module": "collections",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.ChainMap.clear": {
+    "name": "collections_ChainMap_clear",
+    "description": "Clear maps[0], leaving maps[1:] intact.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.ChainMap.clear",
+      "module": "collections",
+      "class_name": "ChainMap",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.ChainMap.copy": {
+    "name": "collections_ChainMap_copy",
+    "description": "New ChainMap or subclass with a new copy of maps[0] and refs to maps[1:]",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.ChainMap.copy",
+      "module": "collections",
+      "class_name": "ChainMap",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.ChainMap.get": {
+    "name": "collections_ChainMap_get",
+    "description": "获取数据（ChainMap类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "default": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "key"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.ChainMap.get",
+      "module": "collections",
+      "class_name": "ChainMap",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.ChainMap.items": {
+    "name": "collections_ChainMap_items",
+    "description": "D.items() -> a set-like object providing a view on D's items",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.ChainMap.items",
+      "module": "collections",
+      "class_name": "ChainMap",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.ChainMap.keys": {
+    "name": "collections_ChainMap_keys",
+    "description": "D.keys() -> a set-like object providing a view on D's keys",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.ChainMap.keys",
+      "module": "collections",
+      "class_name": "ChainMap",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.ChainMap.new_child": {
+    "name": "collections_ChainMap_new_child",
+    "description": "New ChainMap with a new map followed by all previous maps.\nIf no map is provided, an empty dict is used.\nKeyword arguments update the map or new empty dict.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "m": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "kwargs": {
+          "type": "object",
+          "description": "类型从参数名推断: kwargs"
+        }
+      },
+      "required": [
+        "kwargs"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.ChainMap.new_child",
+      "module": "collections",
+      "class_name": "ChainMap",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.ChainMap.pop": {
+    "name": "collections_ChainMap_pop",
+    "description": "Remove *key* from maps[0] and return its value. Raise KeyError if *key* not in maps[0].",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "key",
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.ChainMap.pop",
+      "module": "collections",
+      "class_name": "ChainMap",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.ChainMap.popitem": {
+    "name": "collections_ChainMap_popitem",
+    "description": "Remove and return an item pair from maps[0]. Raise KeyError is maps[0] is empty.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.ChainMap.popitem",
+      "module": "collections",
+      "class_name": "ChainMap",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.ChainMap.setdefault": {
+    "name": "collections_ChainMap_setdefault",
+    "description": "D.setdefault(k[,d]) -> D.get(k,d), also set D[k]=d if k not in D",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "default": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "key"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.ChainMap.setdefault",
+      "module": "collections",
+      "class_name": "ChainMap",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.ChainMap.update": {
+    "name": "collections_ChainMap_update",
+    "description": "D.update([E, ]**F) -> None.  Update D from mapping/iterable E and F.\nIf E present and has a .keys() method, does:     for k in E: D[k] = E[k]\nIf E present and lacks .keys() method, does:     for (k, v) in E: D[k] = v\nIn either case, this is followed by: for k, v in F.items(): D[k] = v",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "other": {
+          "type": "string",
+          "default": "()",
+          "description": "类型从默认值推断: tuple"
+        },
+        "kwds": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "kwds"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.ChainMap.update",
+      "module": "collections",
+      "class_name": "ChainMap",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.ChainMap.values": {
+    "name": "collections_ChainMap_values",
+    "description": "D.values() -> an object providing a view on D's values",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.ChainMap.values",
+      "module": "collections",
+      "class_name": "ChainMap",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.Counter.copy": {
+    "name": "collections_Counter_copy",
+    "description": "Return a shallow copy.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.Counter.copy",
+      "module": "collections",
+      "class_name": "Counter",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.Counter.elements": {
+    "name": "collections_Counter_elements",
+    "description": "Iterator over elements repeating each as many times as its count.\n>>> c = Counter('ABCABC')\n>>> sorted(c.elements())\n['A', 'A', 'B', 'B', 'C', 'C']\n# Knuth's example for prime factors of 1836:  2**2 * 3**3 * 17**1\n>>> import math\n>>> prime_factors = Counter({2: 2, 3: 3, 17: 1})\n>>> math.prod(prime_factors.elements())\n1836\nNote, if an element's count has been set to zero or is a negative\nnumber, elements() will ignore it.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.Counter.elements",
+      "module": "collections",
+      "class_name": "Counter",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.Counter.most_common": {
+    "name": "collections_Counter_most_common",
+    "description": "List the n most common elements and their counts from the most\ncommon to the least.  If n is None, then list all element counts.\n>>> Counter('abracadabra').most_common(3)\n[('a', 5), ('b', 2), ('r', 2)]",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "n": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.Counter.most_common",
+      "module": "collections",
+      "class_name": "Counter",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.Counter.subtract": {
+    "name": "collections_Counter_subtract",
+    "description": "Like dict.update() but subtracts counts instead of replacing them.\nCounts can be reduced below zero.  Both the inputs and outputs are\nallowed to contain zero and negative counts.\nSource can be an iterable, a dictionary, or another Counter instance.\n>>> c = Counter('which')\n>>> c.subtract('witch')             # subtract elements from another iterable\n>>> c.subtract(Counter('watch'))    # subtract elements from another counter\n>>> c['h']                          # 2 in which, minus 1 in witch, minus 1 in watch\n0\n>>> c['w']                          # 1 in which, minus 1 in witch, minus 1 in watch\n-1",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "iterable": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "kwds": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "kwds"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.Counter.subtract",
+      "module": "collections",
+      "class_name": "Counter",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.Counter.total": {
+    "name": "collections_Counter_total",
+    "description": "Sum of the counts",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.Counter.total",
+      "module": "collections",
+      "class_name": "Counter",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.Counter.update": {
+    "name": "collections_Counter_update",
+    "description": "Like dict.update() but add counts instead of replacing them.\nSource can be an iterable, a dictionary, or another Counter instance.\n>>> c = Counter('which')\n>>> c.update('witch')           # add elements from another iterable\n>>> d = Counter('watch')\n>>> c.update(d)                 # add elements from another counter\n>>> c['h']                      # four 'h' in which, witch, and watch\n4",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "other": {
+          "type": "string",
+          "default": "()",
+          "description": "类型从默认值推断: tuple"
+        },
+        "kwds": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "kwds"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.Counter.update",
+      "module": "collections",
+      "class_name": "Counter",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserDict.clear": {
+    "name": "collections_UserDict_clear",
+    "description": "D.clear() -> None.  Remove all items from D.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserDict.clear",
+      "module": "collections",
+      "class_name": "UserDict",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserDict.copy": {
+    "name": "collections_UserDict_copy",
+    "description": "执行copy操作（UserDict类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserDict.copy",
+      "module": "collections",
+      "class_name": "UserDict",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserDict.get": {
+    "name": "collections_UserDict_get",
+    "description": "D.get(k[,d]) -> D[k] if k in D, else d.  d defaults to None.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "default": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "key"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserDict.get",
+      "module": "collections",
+      "class_name": "UserDict",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserDict.items": {
+    "name": "collections_UserDict_items",
+    "description": "D.items() -> a set-like object providing a view on D's items",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserDict.items",
+      "module": "collections",
+      "class_name": "UserDict",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserDict.keys": {
+    "name": "collections_UserDict_keys",
+    "description": "D.keys() -> a set-like object providing a view on D's keys",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserDict.keys",
+      "module": "collections",
+      "class_name": "UserDict",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserDict.pop": {
+    "name": "collections_UserDict_pop",
+    "description": "D.pop(k[,d]) -> v, remove specified key and return the corresponding value.\nIf key is not found, d is returned if given, otherwise KeyError is raised.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "key",
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserDict.pop",
+      "module": "collections",
+      "class_name": "UserDict",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserDict.popitem": {
+    "name": "collections_UserDict_popitem",
+    "description": "D.popitem() -> (k, v), remove and return some (key, value) pair\nas a 2-tuple; but raise KeyError if D is empty.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserDict.popitem",
+      "module": "collections",
+      "class_name": "UserDict",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserDict.setdefault": {
+    "name": "collections_UserDict_setdefault",
+    "description": "D.setdefault(k[,d]) -> D.get(k,d), also set D[k]=d if k not in D",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "default": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "key"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserDict.setdefault",
+      "module": "collections",
+      "class_name": "UserDict",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserDict.update": {
+    "name": "collections_UserDict_update",
+    "description": "D.update([E, ]**F) -> None.  Update D from mapping/iterable E and F.\nIf E present and has a .keys() method, does:     for k in E: D[k] = E[k]\nIf E present and lacks .keys() method, does:     for (k, v) in E: D[k] = v\nIn either case, this is followed by: for k, v in F.items(): D[k] = v",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "other": {
+          "type": "string",
+          "default": "()",
+          "description": "类型从默认值推断: tuple"
+        },
+        "kwds": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "kwds"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserDict.update",
+      "module": "collections",
+      "class_name": "UserDict",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserDict.values": {
+    "name": "collections_UserDict_values",
+    "description": "D.values() -> an object providing a view on D's values",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserDict.values",
+      "module": "collections",
+      "class_name": "UserDict",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserList.append": {
+    "name": "collections_UserList_append",
+    "description": "执行append操作（UserList类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "item": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "item"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserList.append",
+      "module": "collections",
+      "class_name": "UserList",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserList.clear": {
+    "name": "collections_UserList_clear",
+    "description": "执行clear操作（UserList类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserList.clear",
+      "module": "collections",
+      "class_name": "UserList",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserList.copy": {
+    "name": "collections_UserList_copy",
+    "description": "执行copy操作（UserList类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserList.copy",
+      "module": "collections",
+      "class_name": "UserList",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserList.count": {
+    "name": "collections_UserList_count",
+    "description": "执行count操作（UserList类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "item": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "item"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserList.count",
+      "module": "collections",
+      "class_name": "UserList",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserList.extend": {
+    "name": "collections_UserList_extend",
+    "description": "执行extend操作（UserList类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "other": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "other"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserList.extend",
+      "module": "collections",
+      "class_name": "UserList",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserList.index": {
+    "name": "collections_UserList_index",
+    "description": "执行index操作（UserList类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "item": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "item",
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserList.index",
+      "module": "collections",
+      "class_name": "UserList",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserList.insert": {
+    "name": "collections_UserList_insert",
+    "description": "执行insert操作（UserList类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "i": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "item": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "i",
+        "item"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserList.insert",
+      "module": "collections",
+      "class_name": "UserList",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserList.pop": {
+    "name": "collections_UserList_pop",
+    "description": "执行pop操作（UserList类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "key",
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserList.pop",
+      "module": "collections",
+      "class_name": "UserList",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserList.remove": {
+    "name": "collections_UserList_remove",
+    "description": "移除数据（UserList类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "item": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "item"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserList.remove",
+      "module": "collections",
+      "class_name": "UserList",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserList.reverse": {
+    "name": "collections_UserList_reverse",
+    "description": "执行reverse操作（UserList类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserList.reverse",
+      "module": "collections",
+      "class_name": "UserList",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserList.sort": {
+    "name": "collections_UserList_sort",
+    "description": "执行sort操作（UserList类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "kwds": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "args",
+        "kwds"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserList.sort",
+      "module": "collections",
+      "class_name": "UserList",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.capitalize": {
+    "name": "collections_UserString_capitalize",
+    "description": "执行capitalize操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.capitalize",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.casefold": {
+    "name": "collections_UserString_casefold",
+    "description": "执行casefold操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.casefold",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.center": {
+    "name": "collections_UserString_center",
+    "description": "执行center操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "integer",
+          "description": "类型从参数名推断: width"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "width",
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.center",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.count": {
+    "name": "collections_UserString_count",
+    "description": "执行count操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "item": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "item"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.count",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.encode": {
+    "name": "collections_UserString_encode",
+    "description": "执行encode操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "encoding": {
+          "type": "string",
+          "default": "utf-8",
+          "description": "类型从默认值推断: str"
+        },
+        "errors": {
+          "type": "string",
+          "default": "strict",
+          "description": "类型从默认值推断: str"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.encode",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.endswith": {
+    "name": "collections_UserString_endswith",
+    "description": "执行endswith操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "suffix": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "start": {
+          "type": "integer",
+          "default": 0,
+          "description": "类型从默认值推断: int"
+        },
+        "end": {
+          "type": "integer",
+          "default": 9223372036854775807,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": [
+        "suffix"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.endswith",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.expandtabs": {
+    "name": "collections_UserString_expandtabs",
+    "description": "执行expandtabs操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "tabsize": {
+          "type": "integer",
+          "default": 8,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.expandtabs",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.find": {
+    "name": "collections_UserString_find",
+    "description": "查找数据（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sub": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "start": {
+          "type": "integer",
+          "default": 0,
+          "description": "类型从默认值推断: int"
+        },
+        "end": {
+          "type": "integer",
+          "default": 9223372036854775807,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": [
+        "sub"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.find",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.format": {
+    "name": "collections_UserString_format",
+    "description": "格式化数据（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "kwds": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "args",
+        "kwds"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.format",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.format_map": {
+    "name": "collections_UserString_format_map",
+    "description": "格式化数据（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "mapping": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "mapping"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.format_map",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.index": {
+    "name": "collections_UserString_index",
+    "description": "执行index操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "item": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "item",
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.index",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.isalnum": {
+    "name": "collections_UserString_isalnum",
+    "description": "执行isalnum操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.isalnum",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.isalpha": {
+    "name": "collections_UserString_isalpha",
+    "description": "执行isalpha操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.isalpha",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.isascii": {
+    "name": "collections_UserString_isascii",
+    "description": "执行isascii操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.isascii",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.isdecimal": {
+    "name": "collections_UserString_isdecimal",
+    "description": "执行isdecimal操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.isdecimal",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.isdigit": {
+    "name": "collections_UserString_isdigit",
+    "description": "执行isdigit操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.isdigit",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.isidentifier": {
+    "name": "collections_UserString_isidentifier",
+    "description": "执行isidentifier操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.isidentifier",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.islower": {
+    "name": "collections_UserString_islower",
+    "description": "执行islower操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.islower",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.isnumeric": {
+    "name": "collections_UserString_isnumeric",
+    "description": "执行isnumeric操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.isnumeric",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.isprintable": {
+    "name": "collections_UserString_isprintable",
+    "description": "执行isprintable操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.isprintable",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.isspace": {
+    "name": "collections_UserString_isspace",
+    "description": "执行isspace操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.isspace",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.istitle": {
+    "name": "collections_UserString_istitle",
+    "description": "执行istitle操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.istitle",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.isupper": {
+    "name": "collections_UserString_isupper",
+    "description": "执行isupper操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.isupper",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.join": {
+    "name": "collections_UserString_join",
+    "description": "执行join操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "seq": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "seq"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.join",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.ljust": {
+    "name": "collections_UserString_ljust",
+    "description": "执行ljust操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "integer",
+          "description": "类型从参数名推断: width"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "width",
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.ljust",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.lower": {
+    "name": "collections_UserString_lower",
+    "description": "执行lower操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.lower",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.lstrip": {
+    "name": "collections_UserString_lstrip",
+    "description": "执行lstrip操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "chars": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.lstrip",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.partition": {
+    "name": "collections_UserString_partition",
+    "description": "执行partition操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sep": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "sep"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.partition",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.removeprefix": {
+    "name": "collections_UserString_removeprefix",
+    "description": "移除数据（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "prefix": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "prefix"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.removeprefix",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.removesuffix": {
+    "name": "collections_UserString_removesuffix",
+    "description": "移除数据（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "suffix": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "suffix"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.removesuffix",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.replace": {
+    "name": "collections_UserString_replace",
+    "description": "执行replace操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "old": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "new": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "maxsplit": {
+          "type": "integer",
+          "default": -1,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": [
+        "old",
+        "new"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.replace",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.rfind": {
+    "name": "collections_UserString_rfind",
+    "description": "执行rfind操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sub": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "start": {
+          "type": "integer",
+          "default": 0,
+          "description": "类型从默认值推断: int"
+        },
+        "end": {
+          "type": "integer",
+          "default": 9223372036854775807,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": [
+        "sub"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.rfind",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.rindex": {
+    "name": "collections_UserString_rindex",
+    "description": "执行rindex操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sub": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "start": {
+          "type": "integer",
+          "default": 0,
+          "description": "类型从默认值推断: int"
+        },
+        "end": {
+          "type": "integer",
+          "default": 9223372036854775807,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": [
+        "sub"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.rindex",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.rjust": {
+    "name": "collections_UserString_rjust",
+    "description": "执行rjust操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "integer",
+          "description": "类型从参数名推断: width"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "width",
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.rjust",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.rpartition": {
+    "name": "collections_UserString_rpartition",
+    "description": "执行rpartition操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sep": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "sep"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.rpartition",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.rsplit": {
+    "name": "collections_UserString_rsplit",
+    "description": "执行rsplit操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sep": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "maxsplit": {
+          "type": "integer",
+          "default": -1,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.rsplit",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.rstrip": {
+    "name": "collections_UserString_rstrip",
+    "description": "执行rstrip操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "chars": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.rstrip",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.split": {
+    "name": "collections_UserString_split",
+    "description": "执行split操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sep": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "maxsplit": {
+          "type": "integer",
+          "default": -1,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.split",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.splitlines": {
+    "name": "collections_UserString_splitlines",
+    "description": "执行splitlines操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "keepends": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.splitlines",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.startswith": {
+    "name": "collections_UserString_startswith",
+    "description": "执行startswith操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "prefix": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "start": {
+          "type": "integer",
+          "default": 0,
+          "description": "类型从默认值推断: int"
+        },
+        "end": {
+          "type": "integer",
+          "default": 9223372036854775807,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": [
+        "prefix"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.startswith",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.strip": {
+    "name": "collections_UserString_strip",
+    "description": "执行strip操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "chars": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.strip",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.swapcase": {
+    "name": "collections_UserString_swapcase",
+    "description": "执行swapcase操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.swapcase",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.title": {
+    "name": "collections_UserString_title",
+    "description": "执行title操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.title",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.translate": {
+    "name": "collections_UserString_translate",
+    "description": "执行translate操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.translate",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.upper": {
+    "name": "collections_UserString_upper",
+    "description": "执行upper操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "collections.UserString.upper",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.UserString.zfill": {
+    "name": "collections_UserString_zfill",
+    "description": "执行zfill操作（UserString类的方法）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "integer",
+          "description": "类型从参数名推断: width"
+        }
+      },
+      "required": [
+        "width"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.UserString.zfill",
+      "module": "collections",
+      "class_name": "UserString",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.abc.ItemsView.isdisjoint": {
+    "name": "collections_abc_ItemsView_isdisjoint",
+    "description": "Return True if two sets have a null intersection.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "other": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "other"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.abc.ItemsView.isdisjoint",
+      "module": "collections.abc",
+      "class_name": "ItemsView",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "collections.abc.KeysView.isdisjoint": {
+    "name": "collections_abc_KeysView_isdisjoint",
+    "description": "Return True if two sets have a null intersection.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "other": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "other"
+      ]
+    },
+    "metadata": {
+      "source_function": "collections.abc.KeysView.isdisjoint",
+      "module": "collections.abc",
+      "class_name": "KeysView",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  }
+}

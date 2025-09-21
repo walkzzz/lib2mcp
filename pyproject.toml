@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lib2mcp"
+version = "1.0.0"
+description = "Python Library to MCP Tool Converter"
+authors = [
+    {name = "Lib2MCP Team", email = "dev@lib2mcp.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = "==3.10.18"
+dependencies = [
+    "click>=8.0.0",
+    "ollama>=0.1.0"
+]
+
+[project.scripts]
+lib2mcp = "lib2mcp.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0.0",
+    "black>=21.0.0",
+    "flake8>=3.8.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+lib2mcp = ["py.typed"]

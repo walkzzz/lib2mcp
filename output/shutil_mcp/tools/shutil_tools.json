@@ -1,0 +1,724 @@
+{
+  "shutil.chown": {
+    "name": "shutil_chown",
+    "description": "Change owner user and group of the given path.\nuser and group can be the uid/gid or the user/group names, and in that case,\nthey are converted to their respective uid/gid.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "user": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "group": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "path"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.chown",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.copy": {
+    "name": "shutil_copy",
+    "description": "Copy data and mode bits (\"cp src dst\"). Return the file's destination.\nThe destination may be a directory.\nIf follow_symlinks is false, symlinks won't be followed. This\nresembles GNU's \"cp -P src dst\".\nIf source and destination are the same file, a SameFileError will be\nraised.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "src": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "dst": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "follow_symlinks": {
+          "type": "integer",
+          "default": true,
+          "description": "类型从默认值推断: bool"
+        }
+      },
+      "required": [
+        "src",
+        "dst"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.copy",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.copy2": {
+    "name": "shutil_copy2",
+    "description": "Copy data and metadata. Return the file's destination.\nMetadata is copied with copystat(). Please see the copystat function\nfor more information.\nThe destination may be a directory.\nIf follow_symlinks is false, symlinks won't be followed. This\nresembles GNU's \"cp -P src dst\".",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "src": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "dst": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "follow_symlinks": {
+          "type": "integer",
+          "default": true,
+          "description": "类型从默认值推断: bool"
+        }
+      },
+      "required": [
+        "src",
+        "dst"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.copy2",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.copyfile": {
+    "name": "shutil_copyfile",
+    "description": "Copy data from src to dst in the most efficient way possible.\nIf follow_symlinks is not set and src is a symbolic link, a new\nsymlink will be created instead of copying the file it points to.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "src": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "dst": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "follow_symlinks": {
+          "type": "integer",
+          "default": true,
+          "description": "类型从默认值推断: bool"
+        }
+      },
+      "required": [
+        "src",
+        "dst"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.copyfile",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.copyfileobj": {
+    "name": "shutil_copyfileobj",
+    "description": "copy data from file-like object fsrc to file-like object fdst",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "fsrc": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "fdst": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "length": {
+          "type": "integer",
+          "default": 0,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": [
+        "fsrc",
+        "fdst"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.copyfileobj",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.copymode": {
+    "name": "shutil_copymode",
+    "description": "Copy mode bits from src to dst.\nIf follow_symlinks is not set, symlinks aren't followed if and only\nif both `src` and `dst` are symlinks.  If `lchmod` isn't available\n(e.g. Linux) this method does nothing.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "src": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "dst": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "follow_symlinks": {
+          "type": "integer",
+          "default": true,
+          "description": "类型从默认值推断: bool"
+        }
+      },
+      "required": [
+        "src",
+        "dst"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.copymode",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.copystat": {
+    "name": "shutil_copystat",
+    "description": "Copy file metadata\nCopy the permission bits, last access time, last modification time, and\nflags from `src` to `dst`. On Linux, copystat() also copies the \"extended\nattributes\" where possible. The file contents, owner, and group are\nunaffected. `src` and `dst` are path-like objects or path names given as\nstrings.\nIf the optional flag `follow_symlinks` is not set, symlinks aren't\nfollowed if and only if both `src` and `dst` are symlinks.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "src": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "dst": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "follow_symlinks": {
+          "type": "integer",
+          "default": true,
+          "description": "类型从默认值推断: bool"
+        }
+      },
+      "required": [
+        "src",
+        "dst"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.copystat",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.copytree": {
+    "name": "shutil_copytree",
+    "description": "Recursively copy a directory tree and return the destination directory.\nIf exception(s) occur, an Error is raised with a list of reasons.\nIf the optional symlinks flag is true, symbolic links in the\nsource tree result in symbolic links in the destination tree; if\nit is false, the contents of the files pointed to by symbolic\nlinks are copied. If the file pointed by the symlink doesn't\nexist, an exception will be added in the list of errors raised in\nan Error exception at the end of the copy process.\nYou can set the optional ignore_dangling_symlinks flag to true if you\nwant to silence this exception. Notice that this has no effect on\nplatforms that don't support os.symlink.\nThe optional ignore argument is a callable. If given, it\nis called with the `src` parameter, which is the directory\nbeing visited by copytree(), and `names` which is the list of\n`src` contents, as returned by os.listdir():\ncallable(src, names) -> ignored_names\nSince copytree() is called recursively, the callable will be\ncalled once for each directory that is copied. It returns a\nlist of names relative to the `src` directory that should\nnot be copied.\nThe optional copy_function argument is a callable that will be used\nto copy each file. It will be called with the source path and the\ndestination path as arguments. By default, copy2() is used, but any\nfunction that supports the same signature (like copy()) can be used.\nIf dirs_exist_ok is false (the default) and `dst` already exists, a\n`FileExistsError` is raised. If `dirs_exist_ok` is true, the copying\noperation will continue if it encounters existing directories, and files\nwithin the `dst` tree will be overwritten by corresponding files from the\n`src` tree.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "src": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "dst": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "symlinks": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        },
+        "ignore": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "copy_function": {
+          "type": "string",
+          "default": "<function copy2 at 0x00000000028FF1A0>",
+          "description": "类型从默认值推断: function"
+        },
+        "ignore_dangling_symlinks": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        },
+        "dirs_exist_ok": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        }
+      },
+      "required": [
+        "src",
+        "dst"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.copytree",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.disk_usage": {
+    "name": "shutil_disk_usage",
+    "description": "Return disk usage statistics about the given path.\nReturned values is a named tuple with attributes 'total', 'used' and\n'free', which are the amount of total, used and free space, in bytes.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "path"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.disk_usage",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.get_archive_formats": {
+    "name": "shutil_get_archive_formats",
+    "description": "Returns a list of supported formats for archiving and unarchiving.\nEach element of the returned sequence is a tuple (name, description)",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "shutil.get_archive_formats",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.get_terminal_size": {
+    "name": "shutil_get_terminal_size",
+    "description": "Get the size of the terminal window.\nFor each of the two dimensions, the environment variable, COLUMNS\nand LINES respectively, is checked. If the variable is defined and\nthe value is a positive integer, it is used.\nWhen COLUMNS or LINES is not defined, which is the common case,\nthe terminal connected to sys.__stdout__ is queried\nby invoking os.get_terminal_size.\nIf the terminal size cannot be successfully queried, either because\nthe system doesn't support querying, or because we are not\nconnected to a terminal, the value given in fallback parameter\nis used. Fallback defaults to (80, 24) which is the default\nsize used by many terminal emulators.\nThe value returned is a named tuple of type os.terminal_size.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "fallback": {
+          "type": "string",
+          "default": "(80, 24)",
+          "description": "类型从默认值推断: tuple"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "shutil.get_terminal_size",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.get_unpack_formats": {
+    "name": "shutil_get_unpack_formats",
+    "description": "Returns a list of supported formats for unpacking.\nEach element of the returned sequence is a tuple\n(name, extensions, description)",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "shutil.get_unpack_formats",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.ignore_patterns": {
+    "name": "shutil_ignore_patterns",
+    "description": "Function that can be used as copytree() ignore parameter.\nPatterns is a sequence of glob-style patterns\nthat are used to exclude files",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "patterns": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "patterns"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.ignore_patterns",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.make_archive": {
+    "name": "shutil_make_archive",
+    "description": "Create an archive file (eg. zip or tar).\n'base_name' is the name of the file to create, minus any format-specific\nextension; 'format' is the archive format: one of \"zip\", \"tar\", \"gztar\",\n\"bztar\", or \"xztar\".  Or any other registered format.\n'root_dir' is a directory that will be the root directory of the\narchive; ie. we typically chdir into 'root_dir' before creating the\narchive.  'base_dir' is the directory where we start archiving from;\nie. 'base_dir' will be the common prefix of all files and\ndirectories in the archive.  'root_dir' and 'base_dir' both default\nto the current directory.  Returns the name of the archive file.\n'owner' and 'group' are used when creating a tar archive. By default,\nuses the current owner and group.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "base_name": {
+          "type": "string",
+          "description": "类型从参数名推断: base_name"
+        },
+        "format": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "root_dir": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "base_dir": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "verbose": {
+          "type": "integer",
+          "default": 0,
+          "description": "类型从默认值推断: int"
+        },
+        "dry_run": {
+          "type": "integer",
+          "default": 0,
+          "description": "类型从默认值推断: int"
+        },
+        "owner": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "group": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "logger": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "base_name",
+        "format"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.make_archive",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.move": {
+    "name": "shutil_move",
+    "description": "Recursively move a file or directory to another location. This is\nsimilar to the Unix \"mv\" command. Return the file or directory's\ndestination.\nIf dst is an existing directory or a symlink to a directory, then src is\nmoved inside that directory. The destination path in that directory must\nnot already exist.\nIf dst already exists but is not a directory, it may be overwritten\ndepending on os.rename() semantics.\nIf the destination is on our current filesystem, then rename() is used.\nOtherwise, src is copied to the destination and then removed. Symlinks are\nrecreated under the new name if os.rename() fails because of cross\nfilesystem renames.\nThe optional `copy_function` argument is a callable that will be used\nto copy the source or it will be delegated to `copytree`.\nBy default, copy2() is used, but any function that supports the same\nsignature (like copy()) can be used.\nA lot more could be done here...  A look at a mv.c shows a lot of\nthe issues this implementation glosses over.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "src": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "dst": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "copy_function": {
+          "type": "string",
+          "default": "<function copy2 at 0x00000000028FF1A0>",
+          "description": "类型从默认值推断: function"
+        }
+      },
+      "required": [
+        "src",
+        "dst"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.move",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.register_archive_format": {
+    "name": "shutil_register_archive_format",
+    "description": "Registers an archive format.\nname is the name of the format. function is the callable that will be\nused to create archives. If provided, extra_args is a sequence of\n(name, value) tuples that will be passed as arguments to the callable.\ndescription can be provided to describe the format, and will be returned\nby the get_archive_formats() function.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        },
+        "function": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "extra_args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "description": {
+          "type": "string",
+          "default": "",
+          "description": "类型从默认值推断: str"
+        }
+      },
+      "required": [
+        "name",
+        "function"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.register_archive_format",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.register_unpack_format": {
+    "name": "shutil_register_unpack_format",
+    "description": "Registers an unpack format.\n`name` is the name of the format. `extensions` is a list of extensions\ncorresponding to the format.\n`function` is the callable that will be\nused to unpack archives. The callable will receive archives to unpack.\nIf it's unable to handle an archive, it needs to raise a ReadError\nexception.\nIf provided, `extra_args` is a sequence of\n(name, value) tuples that will be passed as arguments to the callable.\ndescription can be provided to describe the format, and will be returned\nby the get_unpack_formats() function.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        },
+        "extensions": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "function": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "extra_args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "description": {
+          "type": "string",
+          "default": "",
+          "description": "类型从默认值推断: str"
+        }
+      },
+      "required": [
+        "name",
+        "extensions",
+        "function"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.register_unpack_format",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.rmtree": {
+    "name": "shutil_rmtree",
+    "description": "Recursively delete a directory tree.\nIf dir_fd is not None, it should be a file descriptor open to a directory;\npath will then be relative to that directory.\ndir_fd may not be implemented on your platform.\nIf it is unavailable, using it will raise a NotImplementedError.\nIf ignore_errors is set, errors are ignored; otherwise, if onerror\nis set, it is called to handle the error with arguments (func,\npath, exc_info) where func is platform and implementation dependent;\npath is the argument to that function that caused it to fail; and\nexc_info is a tuple returned by sys.exc_info().  If ignore_errors\nis false and onerror is None, an exception is raised.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "ignore_errors": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        },
+        "onerror": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "dir_fd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "path"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.rmtree",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.unpack_archive": {
+    "name": "shutil_unpack_archive",
+    "description": "Unpack an archive.\n`filename` is the name of the archive.\n`extract_dir` is the name of the target directory, where the archive\nis unpacked. If not provided, the current working directory is used.\n`format` is the archive format: one of \"zip\", \"tar\", \"gztar\", \"bztar\",\nor \"xztar\".  Or any other registered format.  If not provided,\nunpack_archive will use the filename extension and see if an unpacker\nwas registered for that extension.\nIn case none is found, a ValueError is raised.\nIf `filter` is given, it is passed to the underlying\nextraction function.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "filename": {
+          "type": "string",
+          "description": "类型从参数名推断: filename"
+        },
+        "extract_dir": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "format": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "filter": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "filename"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.unpack_archive",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.unregister_archive_format": {
+    "name": "shutil_unregister_archive_format",
+    "description": "执行unregister_archive_format操作（shutil模块的函数）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.unregister_archive_format",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.unregister_unpack_format": {
+    "name": "shutil_unregister_unpack_format",
+    "description": "Removes the pack format from the registry.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.unregister_unpack_format",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "shutil.which": {
+    "name": "shutil_which",
+    "description": "Given a command, mode, and a PATH string, return the path which\nconforms to the given mode on the PATH, or None if there is no such\nfile.\n`mode` defaults to os.F_OK | os.X_OK. `path` defaults to the result\nof os.environ.get(\"PATH\"), or can be overridden with a custom search\npath.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cmd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "mode": {
+          "type": "integer",
+          "default": 1,
+          "description": "类型从默认值推断: int"
+        },
+        "path": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "cmd"
+      ]
+    },
+    "metadata": {
+      "source_function": "shutil.which",
+      "module": "shutil",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  }
+}

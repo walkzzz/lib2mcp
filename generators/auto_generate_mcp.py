@@ -28,6 +28,9 @@ except ImportError:
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# 获取项目根目录
+PROJECT_ROOT = Path(__file__).parent.parent
+
 def generate_tools_with_lib2mcp(library_name: str, output_dir: Path) -> Dict[str, Any]:
     """使用 lib2mcp 生成工具定义"""
     try:
@@ -308,34 +311,74 @@ def analyze_tool_usability_with_ollama(tools_data: Dict[str, Any], library_name:
             } for tool_id in tools_data.keys()}
         }
 
-def filter_top_tools(tools_data: Dict[str, Any], analysis_results: Dict[str, Any], percentage: float = 0.4) -> Dict[str, Any]:
+def get_dynamic_filter_percentage(tool_count: int) -> float:
+    """
+    根据工具数量动态计算筛选百分比
+    
+    Args:
+        tool_count: 工具总数
+        
+    Returns:
+        float: 筛选百分比 (0.0-1.0)
+    """
+    if tool_count < 20:
+        return 0.9  # 90%
+    elif tool_count < 50:
+        return 0.8  # 80%
+    elif tool_count < 100:
+        return 0.6  # 60%
+    elif tool_count < 200:
+        return 0.5  # 50%
+    elif tool_count < 500:
+        return 0.3  # 30%
+    elif tool_count < 1000:
+        return 0.2  # 20%
+    elif tool_count < 2000:
+        return 0.15  # 15%
+    elif tool_count < 5000:
+        return 0.05  # 5%
+    else:
+        return 0.02  # 2%
+
+def filter_top_tools(tools_data: Dict[str, Any], analysis_results: Dict[str, Any], percentage: Optional[float] = None) -> Dict[str, Any]:
     """
     根据分析结果筛选出前百分之几的工具
     
     Args:
         tools_data: 原始工具数据
         analysis_results: 分析结果
-        percentage: 筛选比例（默认40%）
+        percentage: 筛选比例（默认None，使用动态计算）
         
     Returns:
         Dict[str, Any]: 筛选后的工具数据
     """
     try:
-        # 创建工具评分列表
+        # 如果没有指定百分比，则根据工具数量动态计算
+        if percentage is None:
+            tool_count = len(tools_data)
+            percentage = get_dynamic_filter_percentage(tool_count)
+            logger.info(f"工具数量: {tool_count}, 动态筛选百分比: {percentage*100:.0f}%")
+        
+        # 创建工具评分列表，按使用频率和综合评分排序
         tool_scores = []
         for tool_id, analysis in analysis_results.items():
+            frequency = analysis.get('frequency', 0)
             score = analysis.get('score', 0)
-            tool_scores.append((tool_id, score))
+            # 主要按综合评分排序，使用频率作为次要排序条件
+            tool_scores.append((tool_id, score, frequency))
         
-        # 按评分排序
-        tool_scores.sort(key=lambda x: x[1], reverse=True)
+        # 按综合评分降序排序，评分相同时按使用频率降序排序
+        tool_scores.sort(key=lambda x: (x[1], x[2]), reverse=True)
         
         # 计算需要保留的工具数量
         total_tools = len(tool_scores)
-        keep_count = max(1, int(total_tools * percentage))  # 至少保留1个工具
+        theoretical_count = max(1, int(total_tools * percentage))  # 理论上的工具数量
+        
+        # 取筛选出来的工具数据与理论的百分比数量的最小值
+        keep_count = min(len(tool_scores), theoretical_count)
         
         # 获取前 keep_count 个工具的 ID
-        top_tool_ids = set(tool_id for tool_id, _ in tool_scores[:keep_count])
+        top_tool_ids = set(tool_id for tool_id, _, _ in tool_scores[:keep_count])
         
         # 筛选工具
         filtered_tools = {
@@ -344,7 +387,26 @@ def filter_top_tools(tools_data: Dict[str, Any], analysis_results: Dict[str, Any
             if tool_id in tools_data
         }
         
-        logger.info(f"工具筛选完成: 原始 {total_tools} 个工具，筛选后保留 {len(filtered_tools)} 个工具")
+        logger.info(f"工具筛选完成: 原始 {total_tools} 个工具，筛选后保留 {len(filtered_tools)} 个工具 ({percentage*100:.0f}%)")
+        
+        # 列出筛选后的工具清单
+        print("\n📋 筛选后的工具清单:")
+        # 按评分排序显示工具清单
+        sorted_filtered_tools = sorted(filtered_tools.items(), 
+                                     key=lambda x: next((score for tid, score, freq in tool_scores if tid == x[0]), 0), 
+                                     reverse=True)
+        for i, (tool_id, tool_def) in enumerate(sorted_filtered_tools[:20], 1):  # 只显示前20个工具
+            tool_name = tool_def.get('name', tool_id.replace('.', '_'))
+            # 获取该工具的评分和频率
+            tool_info = next((item for item in tool_scores if item[0] == tool_id), None)
+            if tool_info:
+                score = tool_info[1]
+                frequency = tool_info[2]
+                print(f"   {i:2d}. {tool_name} (评分: {score:.1f}, 频率: {frequency:.1f})")
+            else:
+                print(f"   {i:2d}. {tool_name} (评分: 0.0, 频率: 0.0)")
+        if len(filtered_tools) > 20:
+            print(f"   ... 还有 {len(filtered_tools) - 20} 个工具")
         
         return filtered_tools
         
@@ -524,7 +586,7 @@ def process_mcp_request(request_line: str) -> str:
             }}
         elif method == "tools/call":
             tool_name = params.get("name", "")
-            arguments = params.get("arguments", {{}})
+            arguments = params.get("arguments", {{}}
             
             # 调用对应的处理函数
             handler_name = f"handle_{{tool_name}}"
@@ -668,17 +730,17 @@ def create_cherry_config(library_name: str, server_file: Path, output_file: Path
 @click.option('--output-dir', '-o', default='', help='输出目录')
 @click.option('--tools-only', is_flag=True, help='只生成工具定义，不生成服务器')
 @click.option('--ollama-model', default='deepseek-r1:8b', help='Ollama 模型名称')
-@click.option('--filter-percentage', default=0.6, help='工具筛选百分比 (0.0-1.0)')
+@click.option('--filter-percentage', default=None, type=float, help='工具筛选百分比 (0.0-1.0)，默认根据工具数量动态计算')
 @click.option('--use-ollama', is_flag=True, help='使用 Ollama 大模型进行分析（默认使用网络搜索）')
-def main(library_name: str, output_dir: str, tools_only: bool, ollama_model: str, filter_percentage: float, use_ollama: bool):
+def main(library_name: str, output_dir: str, tools_only: bool, ollama_model: str, filter_percentage: Optional[float], use_ollama: bool):
     """
     自动生成 MCP 工具链
     
     LIBRARY_NAME: 要转换的 Python 库名称
     """
-    # 如果没有指定输出目录，则使用库名作为默认目录
+    # 如果没有指定输出目录，则使用项目根目录下的output文件夹
     if not output_dir:
-        output_dir = f"./output/{library_name}_mcp"
+        output_dir = str(PROJECT_ROOT / "output" / f"{library_name}_mcp")
     
     output_path = Path(output_dir)
     # 使用 parents=True 确保父目录存在，exist_ok=True 避免目录已存在时报错
@@ -719,7 +781,11 @@ def main(library_name: str, output_dir: str, tools_only: bool, ollama_model: str
     
     # 更新工具数据为筛选后的结果
     tools_data = filtered_tools
-    print(f"   筛选后工具数: {len(tools_data)} ({filter_percentage*100:.0f}%)")
+    tool_count = len(tools_data)
+    if filter_percentage is None:
+        print(f"   筛选后工具数: {tool_count} (动态计算)")
+    else:
+        print(f"   筛选后工具数: {tool_count} ({filter_percentage*100:.0f}%)")
     
     if tools_only:
         print("\n🎉 工具定义生成完成!")

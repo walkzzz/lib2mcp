@@ -1,0 +1,651 @@
+{
+  "json.detect_encoding": {
+    "name": "json_detect_encoding",
+    "description": "执行detect_encoding操作（json模块的函数）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "b": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "b"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.detect_encoding",
+      "module": "json",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.dump": {
+    "name": "json_dump",
+    "description": "Serialize ``obj`` as a JSON formatted stream to ``fp`` (a\n``.write()``-supporting file-like object).\nIf ``skipkeys`` is true then ``dict`` keys that are not basic types\n(``str``, ``int``, ``float``, ``bool``, ``None``) will be skipped\ninstead of raising a ``TypeError``.\nIf ``ensure_ascii`` is false, then the strings written to ``fp`` can\ncontain non-ASCII characters if they appear in strings contained in\n``obj``. Otherwise, all such characters are escaped in JSON strings.\nIf ``check_circular`` is false, then the circular reference check\nfor container types will be skipped and a circular reference will\nresult in an ``RecursionError`` (or worse).\nIf ``allow_nan`` is false, then it will be a ``ValueError`` to\nserialize out of range ``float`` values (``nan``, ``inf``, ``-inf``)\nin strict compliance of the JSON specification, instead of using the\nJavaScript equivalents (``NaN``, ``Infinity``, ``-Infinity``).\nIf ``indent`` is a non-negative integer, then JSON array elements and\nobject members will be pretty-printed with that indent level. An indent\nlevel of 0 will only insert newlines. ``None`` is the most compact\nrepresentation.\nIf specified, ``separators`` should be an ``(item_separator, key_separator)``\ntuple.  The default is ``(', ', ': ')`` if *indent* is ``None`` and\n``(',', ': ')`` otherwise.  To get the most compact JSON representation,\nyou should specify ``(',', ':')`` to eliminate whitespace.\n``default(obj)`` is a function that should return a serializable version\nof obj or raise TypeError. The default simply raises TypeError.\nIf *sort_keys* is true (default: ``False``), then the output of\ndictionaries will be sorted by key.\nTo use a custom ``JSONEncoder`` subclass (e.g. one that overrides the\n``.default()`` method to serialize additional types), specify it with\nthe ``cls`` kwarg; otherwise ``JSONEncoder`` is used.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "obj": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "fp": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "skipkeys": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        },
+        "ensure_ascii": {
+          "type": "integer",
+          "default": true,
+          "description": "类型从默认值推断: bool"
+        },
+        "check_circular": {
+          "type": "integer",
+          "default": true,
+          "description": "类型从默认值推断: bool"
+        },
+        "allow_nan": {
+          "type": "integer",
+          "default": true,
+          "description": "类型从默认值推断: bool"
+        },
+        "cls": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "indent": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "separators": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "default": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "sort_keys": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        },
+        "kw": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "obj",
+        "fp",
+        "kw"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.dump",
+      "module": "json",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.dumps": {
+    "name": "json_dumps",
+    "description": "Serialize ``obj`` to a JSON formatted ``str``.\nIf ``skipkeys`` is true then ``dict`` keys that are not basic types\n(``str``, ``int``, ``float``, ``bool``, ``None``) will be skipped\ninstead of raising a ``TypeError``.\nIf ``ensure_ascii`` is false, then the return value can contain non-ASCII\ncharacters if they appear in strings contained in ``obj``. Otherwise, all\nsuch characters are escaped in JSON strings.\nIf ``check_circular`` is false, then the circular reference check\nfor container types will be skipped and a circular reference will\nresult in an ``RecursionError`` (or worse).\nIf ``allow_nan`` is false, then it will be a ``ValueError`` to\nserialize out of range ``float`` values (``nan``, ``inf``, ``-inf``) in\nstrict compliance of the JSON specification, instead of using the\nJavaScript equivalents (``NaN``, ``Infinity``, ``-Infinity``).\nIf ``indent`` is a non-negative integer, then JSON array elements and\nobject members will be pretty-printed with that indent level. An indent\nlevel of 0 will only insert newlines. ``None`` is the most compact\nrepresentation.\nIf specified, ``separators`` should be an ``(item_separator, key_separator)``\ntuple.  The default is ``(', ', ': ')`` if *indent* is ``None`` and\n``(',', ': ')`` otherwise.  To get the most compact JSON representation,\nyou should specify ``(',', ':')`` to eliminate whitespace.\n``default(obj)`` is a function that should return a serializable version\nof obj or raise TypeError. The default simply raises TypeError.\nIf *sort_keys* is true (default: ``False``), then the output of\ndictionaries will be sorted by key.\nTo use a custom ``JSONEncoder`` subclass (e.g. one that overrides the\n``.default()`` method to serialize additional types), specify it with\nthe ``cls`` kwarg; otherwise ``JSONEncoder`` is used.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "obj": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "skipkeys": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        },
+        "ensure_ascii": {
+          "type": "integer",
+          "default": true,
+          "description": "类型从默认值推断: bool"
+        },
+        "check_circular": {
+          "type": "integer",
+          "default": true,
+          "description": "类型从默认值推断: bool"
+        },
+        "allow_nan": {
+          "type": "integer",
+          "default": true,
+          "description": "类型从默认值推断: bool"
+        },
+        "cls": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "indent": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "separators": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "default": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "sort_keys": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        },
+        "kw": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "obj",
+        "kw"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.dumps",
+      "module": "json",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.load": {
+    "name": "json_load",
+    "description": "Deserialize ``fp`` (a ``.read()``-supporting file-like object containing\na JSON document) to a Python object.\n``object_hook`` is an optional function that will be called with the\nresult of any object literal decode (a ``dict``). The return value of\n``object_hook`` will be used instead of the ``dict``. This feature\ncan be used to implement custom decoders (e.g. JSON-RPC class hinting).\n``object_pairs_hook`` is an optional function that will be called with the\nresult of any object literal decoded with an ordered list of pairs.  The\nreturn value of ``object_pairs_hook`` will be used instead of the ``dict``.\nThis feature can be used to implement custom decoders.  If ``object_hook``\nis also defined, the ``object_pairs_hook`` takes priority.\nTo use a custom ``JSONDecoder`` subclass, specify it with the ``cls``\nkwarg; otherwise ``JSONDecoder`` is used.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "fp": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "cls": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "object_hook": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "parse_float": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "parse_int": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "parse_constant": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "object_pairs_hook": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "kw": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "fp",
+        "kw"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.load",
+      "module": "json",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.loads": {
+    "name": "json_loads",
+    "description": "Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance\ncontaining a JSON document) to a Python object.\n``object_hook`` is an optional function that will be called with the\nresult of any object literal decode (a ``dict``). The return value of\n``object_hook`` will be used instead of the ``dict``. This feature\ncan be used to implement custom decoders (e.g. JSON-RPC class hinting).\n``object_pairs_hook`` is an optional function that will be called with the\nresult of any object literal decoded with an ordered list of pairs.  The\nreturn value of ``object_pairs_hook`` will be used instead of the ``dict``.\nThis feature can be used to implement custom decoders.  If ``object_hook``\nis also defined, the ``object_pairs_hook`` takes priority.\n``parse_float``, if specified, will be called with the string\nof every JSON float to be decoded. By default this is equivalent to\nfloat(num_str). This can be used to use another datatype or parser\nfor JSON floats (e.g. decimal.Decimal).\n``parse_int``, if specified, will be called with the string\nof every JSON int to be decoded. By default this is equivalent to\nint(num_str). This can be used to use another datatype or parser\nfor JSON integers (e.g. float).\n``parse_constant``, if specified, will be called with one of the\nfollowing strings: -Infinity, Infinity, NaN.\nThis can be used to raise an exception if invalid JSON numbers\nare encountered.\nTo use a custom ``JSONDecoder`` subclass, specify it with the ``cls``\nkwarg; otherwise ``JSONDecoder`` is used.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "s": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "cls": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "object_hook": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "parse_float": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "parse_int": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "parse_constant": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "object_pairs_hook": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "kw": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "s",
+        "kw"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.loads",
+      "module": "json",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.decoder.JSONArray": {
+    "name": "json_decoder_JSONArray",
+    "description": "执行JSONArray操作（json.decoder模块的函数）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "s_and_end": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "scan_once": {
+          "type": "boolean",
+          "description": "类型从参数名推断: scan_once"
+        },
+        "_w": {
+          "type": "string",
+          "default": "<built-in method match of re.Pattern object at 0x0000000001C28040>",
+          "description": "类型从默认值推断: builtin_method"
+        },
+        "_ws": {
+          "type": "string",
+          "default": " \t\n\r",
+          "description": "类型从默认值推断: str"
+        }
+      },
+      "required": [
+        "s_and_end",
+        "scan_once"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.decoder.JSONArray",
+      "module": "json.decoder",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.decoder.JSONObject": {
+    "name": "json_decoder_JSONObject",
+    "description": "执行JSONObject操作（json.decoder模块的函数）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "s_and_end": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "strict": {
+          "type": "string",
+          "description": "类型从参数名推断: strict"
+        },
+        "scan_once": {
+          "type": "boolean",
+          "description": "类型从参数名推断: scan_once"
+        },
+        "object_hook": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "object_pairs_hook": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "memo": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "_w": {
+          "type": "string",
+          "default": "<built-in method match of re.Pattern object at 0x0000000001C28040>",
+          "description": "类型从默认值推断: builtin_method"
+        },
+        "_ws": {
+          "type": "string",
+          "default": " \t\n\r",
+          "description": "类型从默认值推断: str"
+        }
+      },
+      "required": [
+        "s_and_end",
+        "strict",
+        "scan_once",
+        "object_hook",
+        "object_pairs_hook"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.decoder.JSONObject",
+      "module": "json.decoder",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.decoder.py_scanstring": {
+    "name": "json_decoder_py_scanstring",
+    "description": "Scan the string s for a JSON string. End is the index of the\ncharacter in s after the quote that started the JSON string.\nUnescapes all valid JSON string escape sequences and raises ValueError\non attempt to decode an invalid string. If strict is False then literal\ncontrol characters are allowed in the string.\nReturns a tuple of the decoded string and the index of the character in s\nafter the end quote.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "s": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "end": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "strict": {
+          "type": "integer",
+          "default": true,
+          "description": "类型从默认值推断: bool"
+        },
+        "_b": {
+          "type": "object",
+          "default": {
+            "\"": "\"",
+            "\\": "\\",
+            "/": "/",
+            "b": "\b",
+            "f": "\f",
+            "n": "\n",
+            "r": "\r",
+            "t": "\t"
+          },
+          "description": "类型从默认值推断: dict"
+        },
+        "_m": {
+          "type": "string",
+          "default": "<built-in method match of re.Pattern object at 0x0000000001BE23E0>",
+          "description": "类型从默认值推断: builtin_method"
+        }
+      },
+      "required": [
+        "s",
+        "end"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.decoder.py_scanstring",
+      "module": "json.decoder",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.decoder.JSONDecoder.decode": {
+    "name": "json_decoder_JSONDecoder_decode",
+    "description": "Return the Python representation of ``s`` (a ``str`` instance\ncontaining a JSON document).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "s": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "_w": {
+          "type": "string",
+          "default": "<built-in method match of re.Pattern object at 0x0000000001C28040>",
+          "description": "类型从默认值推断: builtin_method"
+        }
+      },
+      "required": [
+        "s"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.decoder.JSONDecoder.decode",
+      "module": "json.decoder",
+      "class_name": "JSONDecoder",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.decoder.JSONDecoder.raw_decode": {
+    "name": "json_decoder_JSONDecoder_raw_decode",
+    "description": "Decode a JSON document from ``s`` (a ``str`` beginning with\na JSON document) and return a 2-tuple of the Python\nrepresentation and the index in ``s`` where the document ended.\nThis can be used to decode a JSON document from a string that may\nhave extraneous data at the end.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "s": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "idx": {
+          "type": "integer",
+          "default": 0,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": [
+        "s"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.decoder.JSONDecoder.raw_decode",
+      "module": "json.decoder",
+      "class_name": "JSONDecoder",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.encoder.py_encode_basestring": {
+    "name": "json_encoder_py_encode_basestring",
+    "description": "Return a JSON representation of a Python string",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "s": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "s"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.encoder.py_encode_basestring",
+      "module": "json.encoder",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.encoder.py_encode_basestring_ascii": {
+    "name": "json_encoder_py_encode_basestring_ascii",
+    "description": "Return an ASCII-only JSON representation of a Python string",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "s": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "s"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.encoder.py_encode_basestring_ascii",
+      "module": "json.encoder",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.encoder.JSONEncoder.default": {
+    "name": "json_encoder_JSONEncoder_default",
+    "description": "Implement this method in a subclass such that it returns\na serializable object for ``o``, or calls the base implementation\n(to raise a ``TypeError``).\nFor example, to support arbitrary iterators, you could\nimplement default like this::\ndef default(self, o):\ntry:\niterable = iter(o)\nexcept TypeError:\npass\nelse:\nreturn list(iterable)\n# Let the base class default method raise the TypeError\nreturn JSONEncoder.default(self, o)",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "o": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "o"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.encoder.JSONEncoder.default",
+      "module": "json.encoder",
+      "class_name": "JSONEncoder",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.encoder.JSONEncoder.encode": {
+    "name": "json_encoder_JSONEncoder_encode",
+    "description": "Return a JSON string representation of a Python data structure.\n>>> from json.encoder import JSONEncoder\n>>> JSONEncoder().encode({\"foo\": [\"bar\", \"baz\"]})\n'{\"foo\": [\"bar\", \"baz\"]}'",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "o": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "o"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.encoder.JSONEncoder.encode",
+      "module": "json.encoder",
+      "class_name": "JSONEncoder",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.encoder.JSONEncoder.iterencode": {
+    "name": "json_encoder_JSONEncoder_iterencode",
+    "description": "Encode the given object and yield each string\nrepresentation as available.\nFor example::\nfor chunk in JSONEncoder().iterencode(bigobject):\nmysocket.write(chunk)",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "o": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "_one_shot": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        }
+      },
+      "required": [
+        "o"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.encoder.JSONEncoder.iterencode",
+      "module": "json.encoder",
+      "class_name": "JSONEncoder",
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.scanner.py_make_scanner": {
+    "name": "json_scanner_py_make_scanner",
+    "description": "执行py_make_scanner操作（json.scanner模块的函数）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "context": {
+          "type": "string",
+          "description": "类型从参数名推断: context"
+        }
+      },
+      "required": [
+        "context"
+      ]
+    },
+    "metadata": {
+      "source_function": "json.scanner.py_make_scanner",
+      "module": "json.scanner",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "json.tool.main": {
+    "name": "json_tool_main",
+    "description": "执行main操作（json.tool模块的函数）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "metadata": {
+      "source_function": "json.tool.main",
+      "module": "json.tool",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  }
+}

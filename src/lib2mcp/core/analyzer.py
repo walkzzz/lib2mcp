@@ -53,7 +53,7 @@ class LibraryAnalyzer:
             
             # 导入库
             library_module = self._import_library(library_name)
-            
+
             # 获取库基本信息
             library_info = self._extract_library_info(library_module)
             
@@ -90,6 +90,9 @@ class LibraryAnalyzer:
             
             return metadata
             
+        except AnalysisError:
+            # 直接重新抛出AnalysisError，不进行任何其他处理
+            raise
         except Exception as e:
             raise AnalysisError(f"分析库 {library_name} 失败: {str(e)}")
     

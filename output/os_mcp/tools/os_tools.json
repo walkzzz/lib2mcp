@@ -1,0 +1,578 @@
+{
+  "os.add_dll_directory": {
+    "name": "os_add_dll_directory",
+    "description": "Add a path to the DLL search path.\nThis search path is used when resolving dependencies for imported\nextension modules (the module itself is resolved through sys.path),\nand also by ctypes.\nRemove the directory by calling close() on the returned object or\nusing it in a with statement.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "path"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.add_dll_directory",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.execl": {
+    "name": "os_execl",
+    "description": "execl(file, *args)\nExecute the executable file with argument list args, replacing the\ncurrent process.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "file",
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.execl",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.execle": {
+    "name": "os_execle",
+    "description": "execle(file, *args, env)\nExecute the executable file with argument list args and\nenvironment env, replacing the current process.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "file",
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.execle",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.execlp": {
+    "name": "os_execlp",
+    "description": "execlp(file, *args)\nExecute the executable file (which is searched for along $PATH)\nwith argument list args, replacing the current process.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "file",
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.execlp",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.execlpe": {
+    "name": "os_execlpe",
+    "description": "execlpe(file, *args, env)\nExecute the executable file (which is searched for along $PATH)\nwith argument list args and environment env, replacing the current\nprocess.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "file",
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.execlpe",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.execvp": {
+    "name": "os_execvp",
+    "description": "execvp(file, args)\nExecute the executable file (which is searched for along $PATH)\nwith argument list args, replacing the current process.\nargs may be a list or tuple of strings.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "file",
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.execvp",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.execvpe": {
+    "name": "os_execvpe",
+    "description": "execvpe(file, args, env)\nExecute the executable file (which is searched for along $PATH)\nwith argument list args and environment env, replacing the\ncurrent process.\nargs may be a list or tuple of strings.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "env": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "file",
+        "args",
+        "env"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.execvpe",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.fdopen": {
+    "name": "os_fdopen",
+    "description": "执行fdopen操作（os模块的函数）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "fd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "mode": {
+          "type": "string",
+          "default": "r",
+          "description": "类型从默认值推断: str"
+        },
+        "buffering": {
+          "type": "integer",
+          "default": -1,
+          "description": "类型从默认值推断: int"
+        },
+        "encoding": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "kwargs": {
+          "type": "object",
+          "description": "类型从参数名推断: kwargs"
+        }
+      },
+      "required": [
+        "fd",
+        "args",
+        "kwargs"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.fdopen",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.fsdecode": {
+    "name": "os_fsdecode",
+    "description": "Decode filename (an os.PathLike, bytes, or str) from the filesystem\nencoding with 'surrogateescape' error handler, return str unchanged. On\nWindows, use 'strict' error handler if the file system encoding is\n'mbcs' (which is the default encoding).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "filename": {
+          "type": "string",
+          "description": "类型从参数名推断: filename"
+        }
+      },
+      "required": [
+        "filename"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.fsdecode",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.fsencode": {
+    "name": "os_fsencode",
+    "description": "Encode filename (an os.PathLike, bytes, or str) to the filesystem\nencoding with 'surrogateescape' error handler, return bytes unchanged.\nOn Windows, use 'strict' error handler if the file system encoding is\n'mbcs' (which is the default encoding).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "filename": {
+          "type": "string",
+          "description": "类型从参数名推断: filename"
+        }
+      },
+      "required": [
+        "filename"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.fsencode",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.get_exec_path": {
+    "name": "os_get_exec_path",
+    "description": "Returns the sequence of directories that will be searched for the\nnamed executable (similar to a shell) when launching a process.\n*env* must be an environment variable dict or None.  If *env* is None,\nos.environ will be used.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "env": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": []
+    },
+    "metadata": {
+      "source_function": "os.get_exec_path",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.getenv": {
+    "name": "os_getenv",
+    "description": "Get an environment variable, return None if it doesn't exist.\nThe optional second argument can specify an alternate default.\nkey, default and the result are str.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "default": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "key"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.getenv",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.makedirs": {
+    "name": "os_makedirs",
+    "description": "makedirs(name [, mode=0o777][, exist_ok=False])\nSuper-mkdir; create a leaf directory and all intermediate ones.  Works like\nmkdir, except that any intermediate path segment (not just the rightmost)\nwill be created if it does not exist. If the target directory already\nexists, raise an OSError if exist_ok is False. Otherwise no exception is\nraised.  This is recursive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        },
+        "mode": {
+          "type": "integer",
+          "default": 511,
+          "description": "类型从默认值推断: int"
+        },
+        "exist_ok": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.makedirs",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.popen": {
+    "name": "os_popen",
+    "description": "执行popen操作（os模块的函数）",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cmd": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "mode": {
+          "type": "string",
+          "default": "r",
+          "description": "类型从默认值推断: str"
+        },
+        "buffering": {
+          "type": "integer",
+          "default": -1,
+          "description": "类型从默认值推断: int"
+        }
+      },
+      "required": [
+        "cmd"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.popen",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.removedirs": {
+    "name": "os_removedirs",
+    "description": "removedirs(name)\nSuper-rmdir; remove a leaf directory and all empty intermediate\nones.  Works like rmdir except that, if the leaf directory is\nsuccessfully removed, directories corresponding to rightmost path\nsegments will be pruned away until either the whole path is\nconsumed or an error occurs.  Errors during this latter phase are\nignored -- they generally mean that a directory was not empty.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "类型从参数名推断: name"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.removedirs",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.renames": {
+    "name": "os_renames",
+    "description": "renames(old, new)\n\nSuper-rename; create directories as necessary and delete any left\nempty.  Works like rename, except creation of any intermediate\ndirectories needed to make the new pathname good is attempted\nfirst.  After the rename, directories corresponding to rightmost\npath segments of the old name will be pruned until either the\nwhole path is consumed or a nonempty directory is found.\n\nNote: this function can fail with the new directory structure made\nif you lack permissions needed to unlink the leaf directory or\nfile.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "old": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "new": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "old",
+        "new"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.renames",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.spawnl": {
+    "name": "os_spawnl",
+    "description": "spawnl(mode, file, *args) -> integer\nExecute file with arguments from args in a subprocess.\nIf mode == P_NOWAIT return the pid of the process.\nIf mode == P_WAIT return the process's exit code if it exits normally;\notherwise return -SIG, where SIG is the signal that killed it.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "file": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "mode",
+        "file",
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.spawnl",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.spawnle": {
+    "name": "os_spawnle",
+    "description": "spawnle(mode, file, *args, env) -> integer\nExecute file with arguments from args in a subprocess with the\nsupplied environment.\nIf mode == P_NOWAIT return the pid of the process.\nIf mode == P_WAIT return the process's exit code if it exits normally;\notherwise return -SIG, where SIG is the signal that killed it.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "file": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "args": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        }
+      },
+      "required": [
+        "mode",
+        "file",
+        "args"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.spawnle",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  },
+  "os.walk": {
+    "name": "os_walk",
+    "description": "Directory tree generator.\nFor each directory in the directory tree rooted at top (including top\nitself, but excluding '.' and '..'), yields a 3-tuple\ndirpath, dirnames, filenames\ndirpath is a string, the path to the directory.  dirnames is a list of\nthe names of the subdirectories in dirpath (including symlinks to directories,\nand excluding '.' and '..').\nfilenames is a list of the names of the non-directory files in dirpath.\nNote that the names in the lists are just names, with no path components.\nTo get a full path (which begins with top) to a file or directory in\ndirpath, do os.path.join(dirpath, name).\nIf optional arg 'topdown' is true or not specified, the triple for a\ndirectory is generated before the triples for any of its subdirectories\n(directories are generated top down).  If topdown is false, the triple\nfor a directory is generated after the triples for all of its\nsubdirectories (directories are generated bottom up).\nWhen topdown is true, the caller can modify the dirnames list in-place\n(e.g., via del or slice assignment), and walk will only recurse into the\nsubdirectories whose names remain in dirnames; this can be used to prune the\nsearch, or to impose a specific order of visiting.  Modifying dirnames when\ntopdown is false has no effect on the behavior of os.walk(), since the\ndirectories in dirnames have already been generated by the time dirnames\nitself is generated. No matter the value of topdown, the list of\nsubdirectories is retrieved before the tuples for the directory and its\nsubdirectories are generated.\nBy default errors from the os.scandir() call are ignored.  If\noptional arg 'onerror' is specified, it should be a function; it\nwill be called with one argument, an OSError instance.  It can\nreport the error to continue with the walk, or raise the exception\nto abort the walk.  Note that the filename is available as the\nfilename attribute of the exception object.\nBy default, os.walk does not follow symbolic links to subdirectories on\nsystems that support them.  In order to get this functionality, set the\noptional argument 'followlinks' to true.\nCaution:  if you pass a relative pathname for top, don't change the\ncurrent working directory between resumptions of walk.  walk never\nchanges the current directory, and assumes that the client doesn't\neither.\nExample:\nimport os\nfrom os.path import join, getsize\nfor root, dirs, files in os.walk('python/Lib/email'):\nprint(root, \"consumes \")\nprint(sum(getsize(join(root, name)) for name in files), end=\" \")\nprint(\"bytes in\", len(files), \"non-directory files\")\nif 'CVS' in dirs:\ndirs.remove('CVS')  # don't visit CVS directories",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "top": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "topdown": {
+          "type": "integer",
+          "default": true,
+          "description": "类型从默认值推断: bool"
+        },
+        "onerror": {
+          "type": "string",
+          "description": "未知类型，默认为字符串"
+        },
+        "followlinks": {
+          "type": "integer",
+          "default": false,
+          "description": "类型从默认值推断: bool"
+        }
+      },
+      "required": [
+        "top"
+      ]
+    },
+    "metadata": {
+      "source_function": "os.walk",
+      "module": "os",
+      "class_name": null,
+      "is_async": false,
+      "is_static": false,
+      "is_classmethod": false
+    }
+  }
+}

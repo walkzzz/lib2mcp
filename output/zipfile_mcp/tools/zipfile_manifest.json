@@ -1,7 +1,0 @@
-{
-  "library_name": "zipfile",
-  "tools_file": "output\\zipfile_mcp\\tools\\zipfile_tools.json",
-  "statistics_file": "output\\zipfile_mcp\\tools\\zipfile_stats.json",
-  "tool_count": 83,
-  "generated_at": "2025-09-21T13:09:18.703651"
-}

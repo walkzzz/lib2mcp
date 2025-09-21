@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "lib2mcp_shutil": {
+      "command": "python",
+      "args": [
+        "D:\\workspace\\kiro\\lib2mcp\\output\\shutil_mcp\\shutil_mcp_server.py"
+      ]
+    }
+  }
+}
