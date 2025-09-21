@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "lib2mcp_matplotlib": {
+      "command": "python",
+      "args": [
+        "D:\\workspace\\kiro\\lib2mcp\\generators\\matplotlib_mcp\\matplotlib_mcp_server.py"
+      ]
+    }
+  }
+}

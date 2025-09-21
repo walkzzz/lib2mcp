@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "lib2mcp_arcpy": {
+      "command": "python",
+      "args": [
+        "D:\\workspace\\kiro\\lib2mcp\\generators\\arcpy_mcp\\arcpy_mcp_server.py"
+      ]
+    }
+  }
+}
