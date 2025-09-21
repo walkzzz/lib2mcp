@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "lib2mcp_numpy": {
+      "command": "python",
+      "args": [
+        "D:\\workspace\\kiro\\lib2mcp\\generators\\numpy_mcp\\numpy_mcp_server.py"
+      ]
+    }
+  }
+}

@@ -1,0 +1,2 @@
+[console_scripts]
+lib2mcp = lib2mcp.cli:main

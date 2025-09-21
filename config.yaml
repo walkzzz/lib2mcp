@@ -1,0 +1,55 @@
+conversion:
+  enable_type_checking: true
+  exclude_patterns:
+  - test_*
+  - '*._*'
+  - '*.tests.*'
+  handle_exceptions: true
+  include_magic_methods: false
+  include_patterns:
+  - '*'
+  include_private: false
+  max_depth: 10
+  preserve_docstrings: true
+description:
+  docstring_style: auto
+  enhance_descriptions: true
+  extract_parameter_docs: true
+  generate_examples: true
+  include_exceptions: true
+  include_type_hints: true
+  language: auto
+  max_description_length: 500
+  translate_descriptions: false
+logging:
+  backup_count: 5
+  file_path: null
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  level: INFO
+  max_file_size: 10485760
+output:
+  create_subdirs: true
+  format: json
+  generate_manifest: true
+  group_by_module: true
+  output_directory: ./output
+  overwrite_existing: false
+  tool_prefix: ''
+performance:
+  batch_size: 10
+  cache_directory: ./cache
+  enable_caching: true
+  max_cache_size: 104857600
+  max_workers: 4
+  memory_limit: 536870912
+  parallel_processing: true
+query:
+  cache_query_results: true
+  cache_ttl: 3600
+  default_page_size: 20
+  enable_autocomplete: true
+  enable_semantic_search: false
+  enable_tool_index: true
+  index_update_mode: auto
+  max_search_results: 100
+  search_engine: simple
