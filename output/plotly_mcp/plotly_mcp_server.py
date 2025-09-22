@@ -6638,7 +6638,7 @@ def process_mcp_request(request_line: str) -> str:
             }
         elif method == "tools/call":
             tool_name = params.get("name", "")
-            arguments = params.get("arguments", {}
+            arguments = params.get("arguments", {})
             
             # 调用对应的处理函数
             handler_name = f"handle_{tool_name}"
